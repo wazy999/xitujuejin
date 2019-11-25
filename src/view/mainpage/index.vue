@@ -2,7 +2,7 @@
   <div>
     <el-row>
       <el-col>
-        <img src="xitujuejin\src\assets\image\logo.a7995ad.svg" alt="">
+        <img src="https://b-gold-cdn.xitu.io/v3/static/img/logo.a7995ad.svg" alt="">
       </el-col>
     </el-row>
   </div>

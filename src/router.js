@@ -1,14 +1,12 @@
-import VueRouter from 'vue-router';
+import Router from 'vue-router';
 import Vue from 'vue';
-import Home from "@/view/mainpage/index"
-Vue.use(VueRouter)
-export default VueRouter({
-    mode:"hash",
+Vue.use(Router)
+export default new Router({
     routes:[
         {
             path:'/',
             name:'Home',
-            component:Home
+            component:resolve => require(['./view/mainpage/index.vue'],resolve),
         }
     ],
 })
