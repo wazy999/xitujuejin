@@ -12,16 +12,16 @@ export default new Router({
             component:lazyload('mainpage/index.vue'),
             children:[
                 {
-                  path:'/Home',
+                  path:'/',
                   name:'Home',
                   meta:{title:"首页",keepAlive:true},
                   component:lazyload('Homepage/index.vue'), 
                   children:[
                       {
-                        path:'Home/attention',
+                        path:'/attention',
                         name:'attention',
                         meta:{title:"关注",keepAlive:true},
-                        component:lazyload('Homepage/index.vue'), 
+                        component:lazyload('Homepage/content.vue'), 
                       }
                   ]
                 },{

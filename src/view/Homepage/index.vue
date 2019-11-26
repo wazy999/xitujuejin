@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <el-row :gutter="10">
+  <div style="background:#f4f5f5">
+    <el-row :gutter="10" style="background:white">
       <el-col :span="1"> 
         <span style="color:#007fff;cursor:pointer;font-size:14px">推荐</span>
       </el-col>
@@ -8,7 +8,7 @@
         <router-link :to="{path:item.src}">{{item.name}}</router-link>
       </el-col>
     </el-row>
-    <router-view />
+    <router-view ></router-view>
   </div>
 </template>
 <script>
@@ -20,13 +20,13 @@ export default {
     return {
       value:'',
       titleList:[
-        {name:'关注',id:1,src:"Home/attention"},
-        {name:'后端',id:2,src:"Home/after"},
-        {name:'前端',id:3,src:"Home/front"},
-        {name:'安卓',id:4,src:"Home/android"},
-        {name:'ios',id:5,src:"Home/ios"},
-        {name:'人工智能',id:6,src:"Home/artificial"},
-        {name:'开发工具',id:7,src:"Home/development"},
+        {name:'关注',id:1,src:"attention"},
+        {name:'后端',id:2,src:"after"},
+        {name:'前端',id:3,src:"front"},
+        {name:'安卓',id:4,src:"android"},
+        {name:'ios',id:5,src:"ios"},
+        {name:'人工智能',id:6,src:"artificial"},
+        {name:'开发工具',id:7,src:"development"},
       ] ,
       options:[
         { value: '选项1',label: '发布沸点'},

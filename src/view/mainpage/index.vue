@@ -41,7 +41,7 @@ export default {
     return {
       value:'',
       titleList:[
-        {name:'首页',id:1,src:"Home"},
+        {name:'首页',id:1,src:"/"},
         {name:'沸点',id:2,src:"hottop"},
         {name:'话题',id:3,src:"Topic"},
         {name:'小册',id:4,src:"Book"},
