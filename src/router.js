@@ -1,5 +1,6 @@
 import Router from 'vue-router';
 import Vue from 'vue';
+import {lazyload} from "./utils/common"
 Vue.use(Router)
 export default new Router({
     mode:"history",
@@ -7,7 +8,44 @@ export default new Router({
         {
             path:'/',
             name:'Home',
-            component:resolve => require(['./view/mainpage/index.vue'],resolve),
+            meta:{title:"首页",keepAlive:true},
+            component:lazyload('mainpage/index.vue'),
+            children:[
+                {
+                  path:'/Home',
+                  name:'Home',
+                  meta:{title:"首页",keepAlive:true},
+                  component:lazyload('Homepage/index.vue'), 
+                  children:[
+                      {
+                        path:'Home/attention',
+                        name:'attention',
+                        meta:{title:"关注",keepAlive:true},
+                        component:lazyload('Homepage/index.vue'), 
+                      }
+                  ]
+                },{
+                    path:'/hottop',
+                    name:'Hottop',
+                    meta:{title:"沸点",keepAlive:true},
+                    component:lazyload('mainpage/index.vue'), 
+                 },{
+                   path:'/Topic',
+                   name:'Topic',
+                   meta:{title:"话题",keepAlive:true},
+                   component:lazyload('mainpage/index.vue'), 
+                 },{
+                   path:'/Book',
+                   name:'Book',
+                   meta:{title:"小册",keepAlive:true},
+                   component:lazyload('mainpage/index.vue'), 
+                 },{
+                    path:'/Activity',
+                    name:'Activity',
+                    meta:{title:"活动",keepAlive:true},
+                    component:lazyload('mainpage/index.vue'), 
+                  },
+            ]
         }
     ],
 })
