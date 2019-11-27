@@ -1,0 +1,29 @@
+$unit: px;
+$per: '%';
+$multiplier: 0.5;
+$font-size0: 14;
+$step: 2;
+$color-border: #eee;
+$dirlist: top,
+bottom,
+left,
+right;
+
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.fixed{
+    position: fixed;
+}
+$i:50;
+@while $i>-1 {
+    @each $diretion in $dirlist {
+        .margin-#{$diretion}#{$i}{
+            margin-#{$diretion}:$i#{$unit}
+        }
+    }
+    $i:$i-1;
+}
