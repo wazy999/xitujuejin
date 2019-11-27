@@ -1,7 +1,7 @@
 <template>
   <div>
-    <el-row :gutter="10">
-      <el-col :span="2">
+    <el-row :gutter="10" class="fixed top0 left0 right0 bottom0 z-index20" style="background:white;border-bottom:1px lightgray solid;">
+      <el-col :span="2" >
         <img src="https://b-gold-cdn.xitu.io/v3/static/img/logo.a7995ad.svg">
       </el-col>
       <el-col v-for="item in titleList" :key="item.id" :span="1">
@@ -63,7 +63,6 @@ export default {
 }
 .el-row{
   height: 60px;
-  border-bottom:1px gray solid;
   text-align: center;
 }
 .el-col{
@@ -83,7 +82,7 @@ a:active,a:hover{
   color: #007fff
 }
 .avatar{
-      width: 30px;
+    width: 30px;
     height: 30px;
     border-radius: 50%;
     position: relative;

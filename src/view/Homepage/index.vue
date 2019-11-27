@@ -1,6 +1,6 @@
 <template>
-  <div style="background:#f4f5f5">
-    <el-row :gutter="10" style="background:white">
+  <div style="background:#f4f5f5;overflow:scroll" class="fixed left0 right0 top60 bottom0 z-index9">
+    <el-row :gutter="10" style="background:white" class="fixed left0 right0 top60 bottom0 z-index9">
       <el-col :span="1"> 
         <span style="color:#007fff;cursor:pointer;font-size:14px">推荐</span>
       </el-col>
@@ -8,7 +8,7 @@
         <router-link :to="{path:item.src}">{{item.name}}</router-link>
       </el-col>
     </el-row>
-    <router-view ></router-view>
+    <router-view class="margin-top90"></router-view>
   </div>
 </template>
 <script>
