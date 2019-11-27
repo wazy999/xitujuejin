@@ -2,7 +2,7 @@ $unit: px;
 $per: '%';
 $multiplier: 0.5;
 $font-size0: 14;
-$step: 2;
+$step: 1;
 $color-border: #eee;
 $dirlist: top,
 bottom,
@@ -25,5 +25,5 @@ $i:50;
             margin-#{$diretion}:$i#{$unit}
         }
     }
-    $i:$i-1;
+    $i:$i - $step;
 }
